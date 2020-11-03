@@ -69,3 +69,6 @@ You should now be able to generate a simple random story each time you refresh t
 ## Second, do the work
 Now we come to the part where we can explore how to make the code more readable, and also more easily maintainable by removing repetion and breaking up the code into more methods.
 
+We can do this via a few different ways.
+
+
