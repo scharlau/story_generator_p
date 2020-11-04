@@ -18,19 +18,19 @@ And that will install flask with its associated dependencies. We can now start t
 ## Start the web components 
 Create a new file called story.py in the main folder.
 Put this code in the file:
-from flask import Flask
-app = Flask(__name__)
+        from flask import Flask
+        app = Flask(__name__)
 
-@app.route('/')
-def story():
-    mystory = """In a(n) ADJECTIVE +  NOUN"
-        " a young PERSON " 
-        " stumbles across a(n) OBJECT " 
-        " which spurs him into conflict with NAME ANIMAL " 
-        " with the help of a(n) ASSISTANT " 
-        " and her OBJECT/TOOL " 
-        " culminating in ACTION  where someone shouts 'QUOTE'."""
-    return mystory
+        @app.route('/')
+        def story():
+            mystory = """In a(n) ADJECTIVE +  NOUN"
+            " a young PERSON " 
+            " stumbles across a(n) OBJECT " 
+            " which spurs him into conflict with NAME ANIMAL " 
+            " with the help of a(n) ASSISTANT " 
+            " and her OBJECT/TOOL " 
+            " culminating in ACTION  where someone shouts 'QUOTE'."""
+            return mystory
 
 We can confirm this runs by setting a few variables in your environment via the terminal (this assumes you're either using Linus or MacOS)
         export FLASK_APP=story.py
@@ -46,23 +46,23 @@ Install Faker with the command:
 
 Now we can set about changing the nouns, adjectives and other parts of mystory with values from Faker. Go to https://faker.readthedocs.io/en/stable/providers.html and look through the options for Standard Providers and make some changes to mystory by swapping the mystory variable with the following:
         fake = Faker()
-    mystory =   "<html><body><p>In a(n) " + fake.company()
-    mystory = mystory + " a young "
-    mystory = mystory + fake.language_name()
-    mystory = mystory + " stumbles across a(n) "
-    mystory = mystory + fake.domain_word()
-    mystory = mystory +  " which spurs him into conflict with " 
-    mystory = mystory + fake.name() 
-    mystory = mystory + " an " + fake.catch_phrase()
-    mystory = mystory + " with the help of a(n) "
-    mystory = mystory + fake.job()
-    mystory = mystory + " and her "
-    mystory = mystory + fake.file_name() 
-    mystory = mystory + " culminating in a struggle in "
-    mystory = mystory + fake.company()
-    mystory = mystory + " where someone shouts "
-    mystory = mystory + fake.bs()
-    mystory = mystory + " </p></body></html>"
+        mystory =   "<html><body><p>In a(n) " + fake.company()
+        mystory = mystory + " a young "
+        mystory = mystory + fake.language_name()
+        mystory = mystory + " stumbles across a(n) "
+        mystory = mystory + fake.domain_word()
+        mystory = mystory +  " which spurs him into conflict with " 
+        mystory = mystory + fake.name() 
+        mystory = mystory + " an " + fake.catch_phrase()
+        mystory = mystory + " with the help of a(n) "
+        mystory = mystory + fake.job()
+        mystory = mystory + " and her "
+        mystory = mystory + fake.file_name() 
+        mystory = mystory + " culminating in a struggle in "
+        mystory = mystory + fake.company()
+        mystory = mystory + " where someone shouts "
+        mystory = mystory + fake.bs()
+        mystory = mystory + " </p></body></html>"
 
 You should now be able to generate a simple random story each time you refresh the page in the browser. This is the most basic version you could do. 
 
