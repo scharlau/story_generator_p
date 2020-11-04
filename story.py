@@ -27,6 +27,7 @@ def story():
 
 @app.route('/')
 def index():
+    """ We could also add the text to this page and pass in variables """
     mystory = story()
     return render_template("index.html", story=mystory)
 
