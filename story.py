@@ -1,16 +1,13 @@
-from flask import Flask
+from flask import Flask, render_template
 from faker import Faker
 from faker.providers import company, job, person, geo
 
 
 app = Flask(__name__)
 
-
-
-@app.route('/')
 def story():
     fake = Faker()
-    mystory =   "<html><body><p>In a(n) " + fake.company()
+    mystory =   "In a(n) " + fake.company()
     mystory = mystory + " a young "
     mystory = mystory + fake.language_name()
     mystory = mystory + " stumbles across a(n) "
@@ -26,6 +23,10 @@ def story():
     mystory = mystory + fake.company()
     mystory = mystory + " where someone shouts "
     mystory = mystory + fake.bs()
-    mystory = mystory + " </p></body></html>"
     return mystory
+
+@app.route('/')
+def index():
+    mystory = story()
+    return render_template("index.html", story=mystory)
 
