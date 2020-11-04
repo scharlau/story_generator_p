@@ -67,9 +67,17 @@ Now we can set about changing the nouns, adjectives and other parts of mystory w
 
 You should now be able to generate a simple random story each time you refresh the page in the browser. This is the most basic version you could do. 
 
-## Second, do the work
+## Second, do the work as 'deliberate practice'
 Now we come to the part where we can explore how to make the code more readable, and also more easily maintainable by removing repetion and breaking up the code into more methods.
 
-We can do this via a few different ways.
+The goal of 'deliberate practice' is to think about how you'd solve this challenge, and to work at developing code to make this work. There is no single 'correct' version of this code. The purpose of the exercise it become familiar with different ways of making the application work. You should explore how this simple application is done in Rails so that you understand how variables in controllers are show up in the views you see in the browser.
+
+Under 'deliberate practice' we offer up the challenge, then think about options for developing a solution, and code for 12 minutes. After that we pause to discuss how people are approaching the problem, and what they're trying to do. This should be repeated three times and then wrapped up with time for people to express what they found most useful during the session. This should take an hour.
+
+First round: Start with thinking about how you might rewrite the long 'mystory = mystory + ' parts of the app. How might you remove the repetition?
+
+Second round: How might you generate and display multiple stories at the same time? Taking that furher you could let people vote on their prefered story.
+
+Third round: How might you randomise the calls to Faker so that thre are more categories used, or their order changes?
 
 
