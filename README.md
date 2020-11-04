@@ -45,6 +45,7 @@ Install Faker with the command:
         pip install Faker
 
 Now we can set about changing the nouns, adjectives and other parts of mystory with values from Faker. Go to https://faker.readthedocs.io/en/stable/providers.html and look through the options for Standard Providers and make some changes to mystory by swapping the mystory variable with the following:
+
         fake = Faker()
         mystory =   "<html><body><p>In a(n) " + fake.company()
         mystory = mystory + " a young "
