@@ -1,5 +1,5 @@
-# story_generator_p
-A remake of the story generator exercise for python, which was originally in ruby https://github.com/scharlau/Story_Generator .
+# Story Generator in Python Using Flask
+A remake of the story generator exercise for python with Flask, which was originally in ruby https://github.com/scharlau/Story_Generator .
 
 ## First, create the app basics
 When working with python apps you should use a virtual environment so that your applications are self-contained and you can change the version of python and associated libraries as required. We'll use https://github.com/pyenv/pyenv in this example.
