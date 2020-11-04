@@ -39,7 +39,7 @@ We can confirm this runs by setting a few variables in your environment via the 
 
 You can now view your site at localhost:5000 in the browser. It won't show much other than 'my story goes here', but is enough to confirm that everything works correctly.
 
-## Add in 
+## Add in the Faker Categories for Random Values
 We can now add in some random content for the story using the Faker library from https://pypi.org/project/Faker/. 
 Install Faker with the command:
         pip install Faker
