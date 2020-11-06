@@ -12,12 +12,15 @@ Create a new project folder called 'story_generator' and then cd into the folder
         pip install --upgrade pip [ this is optional]  # this installs pip, and upgrades it if required.
 
 We will use Flask (https://flask.palletsprojects.com/en/1.1.x/) as our web framework for the application. We install that with 
+
         pip install flask
+
 And that will install flask with its associated dependencies. We can now start to build the application.
 
 ## Start the web components 
 Create a new file called story.py in the main folder.
 Put this code in the file:
+
         from flask import Flask
         app = Flask(__name__)
 
@@ -33,6 +36,7 @@ Put this code in the file:
             return mystory
 
 We can confirm this runs by setting a few variables in your environment via the terminal (this assumes you're either using Linus or MacOS)
+
         export FLASK_APP=story.py
         export FLASK_ENV=development
         python3 -m flask run
@@ -42,7 +46,8 @@ You can now view your site at localhost:5000 in the browser. It won't show much 
 ## Add in the Faker Categories for Random Values
 We can now add in some random content for the story using the Faker library from https://pypi.org/project/Faker/. 
 Install Faker with the command:
-        pip install Faker
+
+                pip install Faker
 
 Now we can set about changing the nouns, adjectives and other parts of mystory with values from Faker. Go to https://faker.readthedocs.io/en/stable/providers.html and look through the options for Standard Providers and make some changes to mystory by swapping the mystory variable with the following:
 
