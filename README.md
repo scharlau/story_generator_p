@@ -80,8 +80,8 @@ Under 'deliberate practice' we offer up the challenge, then think about options 
 
 First round: Start with thinking about how you might rewrite mystory parts of the app. How might you remove repetition? Consider how you might use Python's [formatting methods](https://docs.python.org/3.9/library/string.html?highlight=f%20string#module-string) to separate out some of the code.
 
-Second round: How might you generate and display multiple stories at the same time? Taking that further you could let people vote on their prefered story.
+Second round: How might you generate and display multiple stories at the same time? Taking that further you could let people vote on their prefered story. 
 
-Third round: How might you randomise the calls to Faker so that there are more categories used, or their order changes?
+Third round: How might you make use of templates to separate out the code from the html?
 
 
