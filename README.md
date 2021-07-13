@@ -4,7 +4,7 @@ A remake of the story generator exercise for python with Flask, which was origin
 ## First, create the app basics
 When working with python apps you should use a virtual environment so that your applications are self-contained and you can change the version of python and associated libraries as required. We'll use https://github.com/pyenv/pyenv in this example.
 
-Create a new project folder called 'story_generator' and then cd into the folder via the terminal and execute these commands:
+Create a new project folder called 'story_generator' and then cd into the folder via the terminal and execute these commands to set up our virtual environment:
 
         pyenv local 3.7.0 # this sets the local version of python to 3.7.0
         python3 -m venv .venv # this creates the virtual environment for you
@@ -53,28 +53,20 @@ Install Faker with the command:
 Add imports to the story.py file for faker. Add the general ones, and then a line for the 'providers' libraries used.
 
       from faker import Faker
-      from faker.providers import company, job, person, geo
+      from faker.providers import company, job, person, geo, lorem
 
-Now we can set about changing the nouns, adjectives and other parts of mystory with values from Faker. Go to https://faker.readthedocs.io/en/stable/providers.html and look through the options for Standard Providers and make some changes to mystory by swapping the mystory variable with the following:
+Now we can set about changing the nouns, adjectives and other parts of mystory with values from Faker. Go to https://faker.readthedocs.io/en/stable/providers.html and look through the options for Standard Providers and make some changes to mystory by swapping the mystory variable with the following using F' Strings https://realpython.com/python-f-strings/:
 
         fake = Faker()
-        mystory =   "<html><body><p>In a(n) " + fake.company()
-        mystory = mystory + " a young "
-        mystory = mystory + fake.language_name()
-        mystory = mystory + " stumbles across a(n) "
-        mystory = mystory + fake.domain_word()
-        mystory = mystory +  " which spurs him into conflict with " 
-        mystory = mystory + fake.name() 
-        mystory = mystory + " an " + fake.catch_phrase()
-        mystory = mystory + " with the help of a(n) "
-        mystory = mystory + fake.job()
-        mystory = mystory + " and her "
-        mystory = mystory + fake.file_name() 
-        mystory = mystory + " culminating in a struggle in "
-        mystory = mystory + fake.company()
-        mystory = mystory + " where someone shouts "
-        mystory = mystory + fake.bs()
-        mystory = mystory + " </p></body></html>"
+        mystory = (
+            f"<html><body><p>In a(n) {fake.company()}"
+            f" a young {fake.language_name()} stumbles across a(n) "
+            f"{fake.domain_word()} which spurs him into conflict with " 
+            f"{fake.name()} an {fake.catch_phrase()}"
+            f" with the help of a(n) {fake.job()} "
+            f" and her {fake.file_name()} culminating in a struggle in "
+            f"{fake.company()} where someone shouts: '{fake.sentence()}' </p></body></html>"
+        )
 
 You should now be able to generate a simple random story each time you refresh the page in the browser. This is the most basic version you could do. 
 
