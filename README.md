@@ -78,7 +78,7 @@ The goal of 'deliberate practice' is to think about how you'd solve this challen
 
 Under 'deliberate practice' we offer up the challenge, then think about options for developing a solution, and code for 12 minutes. After that we pause to discuss how people are approaching the problem, and what they're trying to do. This should be repeated three times and then wrapped up with time for people to express what they found most useful during the session. This should take an hour.
 
-First round: Start with thinking about how you might rewrite the long 'mystory = mystory + ' parts of the app. How might you remove the repetition? Consider how you might use Python's [formatting methods](https://docs.python.org/3.9/library/string.html?highlight=f%20string#module-string) to separate out some of the code.
+First round: Start with thinking about how you might rewrite mystory parts of the app. How might you remove repetition? Consider how you might use Python's [formatting methods](https://docs.python.org/3.9/library/string.html?highlight=f%20string#module-string) to separate out some of the code.
 
 Second round: How might you generate and display multiple stories at the same time? Taking that further you could let people vote on their prefered story.
 
